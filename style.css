@@ -16,6 +16,11 @@ body {
     height: 50vh;
     border-radius: 10px;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: red;
 }
 
 .play-options {
@@ -36,4 +41,70 @@ body {
     padding: 25px;
     background-color: red;
     cursor: pointer;
+}
+
+.left, .right {
+    height: 50vh;
+    background: green;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opt-img-left, .opt-img-right {
+    margin: 5%;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5%;
+    background-color: red;
+}
+
+.opt-img-left {
+    transform: translateX(-400%);
+}
+
+.opt-img-right {
+    transform: translateX(400%);
+}
+
+@keyframes showingleftNotSelected {
+    0%{
+        transform: translateX(-400%);
+    }
+    60% {
+        transform: translateX(0%);
+    }
+    75% {
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 0;
+    }
+}
+@keyframes showingleftSelected {
+    0%{
+        transform: translateX(-400%);
+    }
+    60% {
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes showingright {
+    0%{
+        transform: translateX(400%);
+    }
+    60% {
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
