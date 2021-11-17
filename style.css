@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playground {
+    width: 75%;
+    height: 50vh;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.play-options {
+    background-color: blue;
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.opt-img {
+    margin: 5%;
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: red;
+    cursor: pointer;
+}
