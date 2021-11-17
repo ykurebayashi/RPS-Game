@@ -13,10 +13,7 @@ rockBtn.addEventListener("click", function () {
     leftImgs[0].style.animation = "showingleftSelected 4s forwards";
     leftImgs[1].style.animation = "showingleftNotSelected 4s forwards";
     leftImgs[2].style.animation = "showingleftNotSelected 4s forwards";
-    for (let i = 0; i < leftImgs.length; i += 1) {
-        rightImgs[i].style.animation = "showingright 4s";
-        rightImgs[i].style.transform = "translateX(0%)";
-    }
+    enemySelect();
 });
 
 paperBtn.addEventListener("click", function () {
@@ -24,10 +21,7 @@ paperBtn.addEventListener("click", function () {
     leftImgs[0].style.animation = "showingleftNotSelected 4s forwards";
     leftImgs[1].style.animation = "showingleftSelected 4s forwards";
     leftImgs[2].style.animation = "showingleftNotSelected 4s forwards";
-    for (let i = 0; i < leftImgs.length; i += 1) {
-        rightImgs[i].style.animation = "showingright 4s";
-        rightImgs[i].style.transform = "translateX(0%)";
-    }
+    enemySelect();
 });
 
 scissorsBtn.addEventListener("click", function () {
@@ -35,11 +29,32 @@ scissorsBtn.addEventListener("click", function () {
     leftImgs[0].style.animation = "showingleftNotSelected 4s forwards";
     leftImgs[1].style.animation = "showingleftNotSelected 4s forwards";
     leftImgs[2].style.animation = "showingleftSelected 4s forwards";
-    for (let i = 0; i < leftImgs.length; i += 1) {
-        rightImgs[i].style.animation = "showingright 4s";
-        rightImgs[i].style.transform = "translateX(0%)";
-    }
+    enemySelect();
 });
 
-console.log(leftImgs);
-console.log(rightImgs);
+// Setting random animation for the right
+function enemySelect () {
+    const enemySelectedOption = Math.floor(Math.random() * (3 - 1 + 1) + 1); // https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+    console.log(enemySelectedOption);
+
+    if (enemySelectedOption === 1) {
+        rightImgs[0].style.animation = "showingrightSelected 4s forwards";
+        rightImgs[1].style.animation = "showingrightNotSelected 4s forwards";
+        rightImgs[2].style.animation = "showingrightNotSelected 4s forwards";
+    }
+
+    if (enemySelectedOption === 2) {
+        rightImgs[0].style.animation = "showingrightNotSelected 4s forwards";
+        rightImgs[1].style.animation = "showingrightSelected 4s forwards";
+        rightImgs[2].style.animation = "showingrightNotSelected 4s forwards";
+    }
+
+    if (enemySelectedOption === 3) {
+        rightImgs[0].style.animation = "showingrightNotSelected 4s forwards";
+        rightImgs[1].style.animation = "showingrightNotSelected 4s forwards";
+        rightImgs[2].style.animation = "showingrightSelected 4s forwards";
+    }
+}
+
+
+// Setting function to display the result
