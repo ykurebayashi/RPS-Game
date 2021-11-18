@@ -9,6 +9,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.play-scene {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.315);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 0px 15%;
 }
 
 .scoreboard {
@@ -20,16 +35,16 @@ body {
     width: 75%;
     height: 50vh;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid rgba(255, 255, 255, 0.658);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: red;
+    background-color: rgb(139, 216, 206);
 }
 
 .play-options {
-    background-color: blue;
+    background-color: #a9e085;
     width: 50%;
     height: 40vh;
     display: flex;
@@ -46,7 +61,7 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     padding: 25px;
-    background-color: red;
+    background-color: rgba(255, 40, 40, 0.829);
     cursor: pointer;
 }
 
@@ -57,26 +72,34 @@ body {
 }
 .left, .right {
     height: 50vh;
-    background: green;
-    border: 1px solid black;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0.5px );
+    -webkit-backdrop-filter: blur( 0.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .opt-img-left, .opt-img-right {
     margin: 5%;
     width: 25%;
-    border: 1px solid black;
+    border: 1px solid rgb(202, 202, 202);
     border-radius: 10px;
     padding: 5%;
-    background-color: red;
+    background-color: rgba(255, 40, 40, 0.829);
 }
 
 .play-again-btn {
     transform: translateY(500%);
     transition: 2s all ease;
+    padding: 20px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color: rgba(255, 254, 254, 0.39);
+    cursor: pointer;
 }
 
 .opt-img-left {
@@ -109,8 +132,12 @@ body {
     60% {
         transform: translateX(0%);
     }
+    75% {
+        background-color: rgb(228, 32, 32, 0.726);
+    }
     100%{
         transform: translateX(0%);
+        background-color: rgba(120, 236, 97, 0.808);
     }
 }
 
@@ -137,7 +164,11 @@ body {
     60% {
         transform: translateX(0%);
     }
+    75% {
+        background-color: rgb(228, 32, 32, 0.726);
+    }
     100%{
         transform: translateX(0%);
+        background-color: rgba(120, 236, 97, 0.808);
     }
 }

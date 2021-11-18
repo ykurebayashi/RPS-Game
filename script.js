@@ -50,7 +50,7 @@ function getResult() {
     if (playerSelected === botSelected) {
         setTimeout(() => {
             alert("Draw!");
-        }, 3000);
+        }, 4000);
     }
 
     if(playerSelected === 1) {
@@ -81,8 +81,8 @@ function getResult() {
     }
 
     setTimeout(() => {
-        playerScoreText.innerHTML = playerScore;
-        botScoreText.innerHTML = botScore;
+        playerScoreText.innerHTML = `You :${playerScore}`;
+        botScoreText.innerHTML = `${botScore}: Bot`;
     }, 3000);
 }
 
