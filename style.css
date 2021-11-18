@@ -11,6 +11,11 @@ body {
     align-items: center;
 }
 
+.scoreboard {
+    display: flex;
+    font-size: 50px;
+}
+
 .playground {
     width: 75%;
     height: 50vh;
@@ -28,9 +33,11 @@ body {
     width: 50%;
     height: 40vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .opt-img {
@@ -43,6 +50,11 @@ body {
     cursor: pointer;
 }
 
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .left, .right {
     height: 50vh;
     background: green;
@@ -60,6 +72,11 @@ body {
     border-radius: 10px;
     padding: 5%;
     background-color: red;
+}
+
+.play-again-btn {
+    transform: translateY(500%);
+    transition: 2s all ease;
 }
 
 .opt-img-left {
